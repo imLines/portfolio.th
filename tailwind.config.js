@@ -4,9 +4,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'home-moutain': "url('../images/background-home.jpg')"
-      }
+        'home-background': "url('../images/background-home.png')"
+      },
     },
+
   },
   plugins: [],
 }

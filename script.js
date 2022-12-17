@@ -1,5 +1,4 @@
 /* MENU HAMBURGER  */ 
-/* for header :  w-3/5 bg-black h-screen flex flex-col items-center  */
 
 const toggle = document.querySelector('#nav-toggle');
 const buttonOfHamburger = document.querySelector('#button-hamburger');
@@ -8,11 +7,11 @@ const main = document.querySelector('main');
 
 
 toggle.addEventListener('click', ()=>{
-    menu.className = toggle.checked ? 'block w-3/5 bg-black h-screen flex flex-col items-center fixed' : 'hidden';
+    menu.className = toggle.checked ? 'block w-4/5 bg-black h-screen flex flex-col items-center fixed max-h-screen' : 'hidden';
     if(toggle.checked){
-        buttonOfHamburger.src = '../images/icon/cross-white.png'
+        buttonOfHamburger.src = '../images/icon/cross-white.png';
     }else{
-        buttonOfHamburger.src = '../images/icon/menu-hamburger.png'
+        buttonOfHamburger.src = '../images/icon/menu-hamburger.png';
     }
 })
 
