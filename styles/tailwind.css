@@ -16,6 +16,20 @@
     text-decoration-color: #239EDB;
 }
 
+.bottom-title{
+    color: #050D18;
+    font-weight: 900;
+}
+
+.background-section{
+    background-color: #F5F8FD;
+}
+
+.date{
+    background-color: #E5EDF9;
+    width: fit-content;
+}
+
 .corp{
     color: #38393A;
 }
@@ -31,9 +45,9 @@ colors: {
       'first' : '#239EDB',
       'corp' : '#38393A',
       'title': '#19426B',
+      'bottom-title': '#050D18'
       'date-elm-grey': '#E5EDF9',
-      'section': '#F5F8FD',
-      'bottom-section': '#050d18'
+      'background-section': '#F5F8FD',
     },
 
 */

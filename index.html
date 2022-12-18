@@ -13,7 +13,7 @@
 
         <header class="hidden ">
             <div class="flex flex-col items-center">
-                <img class="w-44 h-44 bg-white mt-5 mb-3 rounded-full"  src="./images/emoji-smile.png" alt="my-emoji">
+                <img class="w-32 h-32 bg-white mt-5 mb-3 rounded-full"  src="./images/emoji-smile.png" alt="my-emoji">
                 <h1 class="text-white">Tony Hubert</h1>
                 <div class="flex flex-row justify-center w-full">
                     <a href=""><img class="w-10 h-10" src="./images/icon/twitter-icon.svg"  alt="link-icon-twitter"/></a>
@@ -22,10 +22,10 @@
                     <a href=""><img class="w-10 h-10" src="./images/icon/linkedin-icon.svg" alt="link-icon-linkedin"/></a>
                 </div>
             </div>
-            <nav class="flex flex-col items-start justify-center w-full h-full ml-8 ">
+            <nav class="flex flex-col items-start justify-center w-full h-auto ml-8 mt-4">
                 <ul class="">
                     <li class="text-gray-400 ">
-                        <a class="flex items-center mt-4"  href="#home">
+                        <a class="flex items-center mt-4 nav-link"  href="#home">
                             <div class=" text-center ">
                                 <svg  class="fill-gray-400 w-6 h-6" width="100" height="100" viewBox="0 0 50 50">
                                     <path d="M11 39h7.5V26.5h11V39H37V19.5L24 9.75 11 19.5Zm-3 3V18L24 6l16 12v24H26.5V29.5h-5V42Zm16-17.65Z"/>
@@ -35,14 +35,14 @@
                         </a>
                     </li>
                     <li class="text-gray-400">
-                        <a href="#whoIsMe" class="flex items-center mt-4">
+                        <a href="#whoIsMe" class="flex items-center mt-4 nav-link">
                             <svg class="fill-gray-400 w-6 h-6" width="100" height="100" viewBox="0 0 50 50">
                                 <path d="M24 23.95q-3.3 0-5.4-2.1-2.1-2.1-2.1-5.4 0-3.3 2.1-5.4 2.1-2.1 5.4-2.1 3.3 0 5.4 2.1 2.1 2.1 2.1 5.4 0 3.3-2.1 5.4-2.1 2.1-5.4 2.1ZM8 40v-4.7q0-1.9.95-3.25T11.4 30q3.35-1.5 6.425-2.25Q20.9 27 24 27q3.1 0 6.15.775 3.05.775 6.4 2.225 1.55.7 2.5 2.05.95 1.35.95 3.25V40Zm3-3h26v-1.7q0-.8-.475-1.525-.475-.725-1.175-1.075-3.2-1.55-5.85-2.125Q26.85 30 24 30t-5.55.575q-2.7.575-5.85 2.125-.7.35-1.15 1.075Q11 34.5 11 35.3Zm13-16.05q1.95 0 3.225-1.275Q28.5 18.4 28.5 16.45q0-1.95-1.275-3.225Q25.95 11.95 24 11.95q-1.95 0-3.225 1.275Q19.5 14.5 19.5 16.45q0 1.95 1.275 3.225Q22.05 20.95 24 20.95Zm0-4.5ZM24 37Z"/>
                             </svg>
                             Qui-suis je ?</a>
                         </li>
                     <li class="text-gray-400">
-                        <a href="#myRoad" class="flex items-center mt-4">
+                        <a href="#myRoad" class="flex items-center mt-4 nav-link">
                             <svg class="fill-gray-400 w-6 h-6" width="100" height="100" viewBox="0 0 50 50">
                                 <path d="M10 37.8v2.7q0 .65-.425 1.075Q9.15 42 8.5 42h-1q-.65 0-1.075-.425Q6 41.15 6 40.5V24.3l4.25-12.8q.25-.7.825-1.1.575-.4 1.325-.4h23.2q.75 0 1.325.4t.825 1.1L42 24.3v16.2q0 .65-.425 1.075Q41.15 42 40.5 42h-1.05q-.65 0-1.05-.425T38 40.5v-2.7Zm.15-16.5h27.7L35.1 13H12.9ZM9 24.3v10.5Zm5.3 8q1.15 0 1.925-.8.775-.8.775-1.9 0-1.15-.775-1.975-.775-.825-1.925-.825t-1.975.825q-.825.825-.825 1.975 0 1.15.825 1.925.825.775 1.975.775Zm19.45 0q1.15 0 1.975-.8.825-.8.825-1.9 0-1.15-.825-1.975-.825-.825-1.975-.825-1.15 0-1.925.825-.775.825-.775 1.975 0 1.15.8 1.925.8.775 1.9.775ZM9 34.8h30V24.3H9Z"/>
                             </svg>
@@ -50,7 +50,7 @@
                         </a>
                     </li>
                     <li class="text-gray-400">
-                        <a href="#myFlow" class="flex items-center mt-4">
+                        <a href="#myFlow" class="flex items-center mt-4 nav-link">
                             <svg class="fill-gray-400 w-6 h-6" width="100" height="100" viewBox="0 0 50 50">
                                 <path d="M12 44v-8.6q-2.85-2.6-4.425-6.075Q6 25.85 6 22q0-7.5 5.25-12.75T24 4q6.25 0 11.075 3.675Q39.9 11.35 41.35 17.25l2.75 10.9q.2.7-.25 1.275t-1.2.575H38v7q0 1.25-.875 2.125T35 40h-5v4h-3v-7h8V27h5.7l-2.25-9q-1.2-4.85-5.25-7.925T24 7q-6.25 0-10.625 4.325T9 21.9q0 3.2 1.325 6.1 1.325 2.9 3.725 5.15l.95.9V44Zm12.85-18.5Zm-2.4 3.8h3l.15-2.2q.6-.1 1.125-.425.525-.325.925-.725l2.1.7 1.4-2.4-1.5-1.2q.25-.7.25-1.45t-.25-1.45l1.5-1.2-1.4-2.4-2.1.7q-.4-.4-.95-.7-.55-.3-1.1-.45l-.15-2.2h-3l-.15 2.2q-.55.15-1.1.45-.55.3-.95.7l-2.1-.7-1.4 2.4 1.5 1.2q-.25.7-.25 1.45t.25 1.45l-1.5 1.2 1.4 2.4 2.1-.7q.4.4.925.725.525.325 1.125.425Zm1.5-4.2q-1.45 0-2.475-1.025Q20.45 23.05 20.45 21.6q0-1.45 1.025-2.475Q22.5 18.1 23.95 18.1q1.45 0 2.475 1.025Q27.45 20.15 27.45 21.6q0 1.45-1.025 2.475Q25.4 25.1 23.95 25.1Z"/>
                             </svg>
@@ -58,7 +58,7 @@
                         </a>
                     </li>
                     <li class="text-gray-400">
-                        <a href="#myAchievments" class="flex items-center mt-4">
+                        <a href="#myAchievments" class="flex items-center mt-4 nav-link">
                             <svg class="fill-gray-400 w-6 h-6" width="100" height="100" viewBox="0 0 50 50">
                                 <path d="M10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h14.5v3H13v28.7l11-4.65 11 4.65v-16.7h3V42l-14-6Zm3-33.25h14.5H24Zm22 9v-4.5h-4.5v-3H35v-4.5h3v4.5h4.5v3H38v4.5Z"/>
                             </svg>
@@ -66,7 +66,7 @@
                         </a>
                     </li>
                     <li class="text-gray-400">
-                        <a href="#contactMe" class="flex items-center mt-4">
+                        <a href="#contactMe" class="flex items-center mt-4 nav-link">
                             <svg class="fill-gray-400 w-6 h-6" width="100" height="100" viewBox="0 0 50 50">
                                 <path d="M7 40q-1.2 0-2.1-.9Q4 38.2 4 37V11q0-1.2.9-2.1Q5.8 8 7 8h34q1.2 0 2.1.9.9.9.9 2.1v26q0 1.2-.9 2.1-.9.9-2.1.9Zm17-15.1L7 13.75V37h34V13.75Zm0-3L40.8 11H7.25ZM7 13.75V11v26Z"/>
                             </svg>
@@ -83,8 +83,8 @@
                     <h2 class="text-white text-2xl">Développeur web Fullstack</h2>
                 </div>
             </section>
-            <section class="h-auto w-screen py-7 px-3">
-                <h2 class="text-4xl mb-8 title">Qui suis-je ?</h2>
+            <section id="whoIsMe" class="h-auto w-screen py-7 px-3">
+                <h2 class="text-4xl my-8 title">Qui suis-je ?</h2>
                 <p class="corp text-lg">
                     Bienvenue ! <br/>
                     Moi c’est Tony, j’ai 23 ans. Passionné depuis tout jeune par tout ce qui possède une carte-mère, j’ai pris la décision de consacrer ma vie professionnelle au 
@@ -100,6 +100,32 @@
                     <a class="w-52 first-color rounded-lg p-3 text-center" href="#" download>Télécharger mon CV</a>
                 </div>
             </section>
+            <section id="myRoad" class="background-section h-auto w-screen py-7 px-3">
+                <h2 class="text-4xl my-8 title">Mon parcours</h2>
+
+                <h3 class="bottom-title text-2xl mt-12">Découverte</h3>
+                <p class="date p-3">janvier 2021-avril 2021</p>
+                <p class="corp text-lg pb-5 mt-7">Pendant ce temps, je profitais du temps après le travail pour comprendre le fonctionnement des site, j’ai créé à ce moment là mes premières pages web en html/css.</p>
+
+                <h3 class="bottom-title text-2xl mt-12">Formation TheHackingProject</h3>
+                <p class="date p-3">avril 2021-juin 2021</p>
+                <p class="corp text-lg pb-5 mt-7">À THP nous avons appris en 3 mois à développer des sites web statiques et dynamiques à l’aide de Ruby/RoR et html/css/javascript. Nous avons également à nous servir de git/github et générer des requêtes SQL.</p>
+
+                <h3 class="bottom-title text-2xl mt-12">Formation en autodidacte</h3>
+                <p class="date p-3">juillet 2021-avril 2022</p>
+                <p class="corp text-lg pb-5 mt-7">J’ai décidé à l’issu de la formation THP de continuer à approfondir mes connaissances notamment en apprenant le Javascript, les bases de Python et les différentes manière de développer un site web avec CodeCademy. J’ai suivi un certain nombre de formations sur OpenClassRoom, tout particulièrement sur les notions de design de base mais aussi sur la méthodologie AGILE.</p>
+
+                <h3 class="bottom-title text-2xl mt-12">Formation à Breizh Institut</h3>
+                <p class="date p-3">mai 2021-octobre 2022</p>
+                <p class="corp text-lg pb-5 mt-7">N’ayant pas de diplôme qui puisse mettre en valeur les compétences acquises jusqu’ici, j’ai décidé de suivre une formation de qualité et obtenir un titre RNCP. Durant cette formation qui à durée 6 mois j’ai appris à utiliser le Php et son framework Synfony, Node.js et son framework Express.js et encore React.js/React Native. J’ai poussé un peu plus le Javascript Vanilla et appris à communiquer avec les API. Cette formation très enrichissante avec un professeur très qualitatif m’as permis d’obtenir mon titre.</p>
+
+                <h3 class="bottom-title text-2xl mt-12">Recherche d’une entreprise</h3>
+                <p class="date p-3">novembre 2021-maintenant</p>
+                <p class="corp text-lg pb-5 mt-7">Après mon examen, j’ai décider de développer des projets pour mettre en oeuvre mes compétences. 
+                À l’heure d’aujourd’hui, je suis prêt à intégrer une entreprise et leur fournir un travail de qualité. Je ne cesse d’apprendre avec plaisir afin de servir dans le camp backend et frontend tout en effectuant une veille journalière pour rester à jour.</p>
+
+                              
+            </section>        
         </main>
         <script src="./script.js" defer></script>
     </body>
