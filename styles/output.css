@@ -600,6 +600,14 @@ video {
   height: 12rem;
 }
 
+.h-72{
+  height: 18rem;
+}
+
+.h-16{
+  height: 4rem;
+}
+
 .w-12{
   width: 3rem;
 }
@@ -644,12 +652,20 @@ video {
   align-items: flex-start;
 }
 
+.items-end{
+  align-items: flex-end;
+}
+
 .items-center{
   align-items: center;
 }
 
 .justify-center{
   justify-content: center;
+}
+
+.justify-around{
+  justify-content: space-around;
 }
 
 .rounded-full{
@@ -679,8 +695,17 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-red-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
 .bg-home-background{
   background-image: url('../images/background-home.png');
+}
+
+.bg-wwiDEV-background{
+  background-image: url('../images/projects/wwiDEV/wwiDEV-background.png');
 }
 
 .bg-cover{
@@ -731,14 +756,18 @@ video {
   line-height: 2rem;
 }
 
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.font-semibold{
+  font-weight: 600;
 }
 
 .text-white{
@@ -749,6 +778,12 @@ video {
 .text-gray-400{
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.shadow-xl{
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 *{
@@ -773,7 +808,7 @@ video {
   background-color: #F5F8FD;
 }
 
-.date{
+.etiquette{
   background-color: #E5EDF9;
   width: -moz-fit-content;
   width: fit-content;
@@ -783,9 +818,26 @@ video {
   color: #38393A;
 }
 
-.first-color{
+.button{
   background-color: #239EDB;
   color: #fff;
+}
+
+.blur-background-content {
+  color: #eeeeee;
+  font-weight: bold;
+  border: 3px solid #cccccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+#project-bar{
+  background-color: rgba(35, 158, 219, 0.8);
 }
 
 /*
