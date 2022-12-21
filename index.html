@@ -9,11 +9,11 @@
 </head>
     <body class="relative">
         <input type="checkbox" id="nav-toggle" class="hidden" >
-        <label  for="nav-toggle"><img id="button-hamburger" src="./images/icon/menu-hamburger.png" class="w-12 h-12 rounded-full bg-black top-3 right-3 p-2 fixed" /></label>
+        <label  for="nav-toggle"><img id="button-hamburger" src="./images/icon/menu-hamburger.png" class="w-12 h-12 rounded-full bg-black top-3 right-3 p-2 fixed z-99" /></label>
 
         <header class="hidden ">
             <div class="flex flex-col items-center">
-                <img class="w-32 h-32 bg-white mt-5 mb-3 rounded-full"  src="./images/emoji-smile.png" alt="my-emoji">
+                <img class="w-32 h-32 bg-white mt-5 mb-3 rounded-full overflow-y-scroll"  src="./images/emoji-smile.png" alt="my-emoji">
                 <h1 class="text-white">Tony Hubert</h1>
                 <div class="flex flex-row justify-center w-full">
                     <a href=""><img class="w-10 h-10" src="./images/icon/twitter-icon.svg"  alt="link-icon-twitter"/></a>
@@ -22,7 +22,7 @@
                     <a href=""><img class="w-10 h-10" src="./images/icon/linkedin-icon.svg" alt="link-icon-linkedin"/></a>
                 </div>
             </div>
-            <nav class="flex flex-col items-start justify-center w-full h-auto ml-8 mt-4">
+            <nav class="flex flex-col items-start justify-center w-full h-full ml-8 mt-4 mb-14">
                 <ul class="">
                     <li class="text-gray-400 ">
                         <a class="flex items-center mt-4 nav-link"  href="#home">
@@ -76,7 +76,8 @@
                 </ul>
             </nav>
         </header>
-        <main class="h-screen w-screen">
+
+        <main class="">
             <section id="home" class="bg-home-background bg-cover bg-center  w-screen h-screen flex items-center justify-center" >
                 <div class="flex flex-col items-start justify-center">
                     <h1 class="text-white text-6xl">Tony Hubert</h1>
@@ -124,7 +125,7 @@
                 <p class="corp text-lg pb-5 mt-7">Après mon examen, j’ai décider de développer des projets pour mettre en oeuvre mes compétences. 
                 À l’heure d’aujourd’hui, je suis prêt à intégrer une entreprise et leur fournir un travail de qualité. Je ne cesse d’apprendre avec plaisir afin de servir dans le camp backend et frontend tout en effectuant une veille journalière pour rester à jour.</p>         
             </section>  
-            <section id="myFlow" class=" h-auto w-screen py-7 px-3">
+            <section id="myFlow" class=" h-auto w-screen py-12 px-3">
                 <h2 class="text-3xl my-8 title">Mes compétences</h2>
                 
                 <h3 class="bottom-title text-2xl mt-12">Frontend</h3>
@@ -142,19 +143,118 @@
                 <h3 class="bottom-title text-2xl mt-12">Autres</h3>
                 <p class="corp text-lg pb-5 ">Wordpress - Git/Github - Sécurité - NPM</p>
                 
-                <h3 class="bottom-title text-2xl mt-12">Distribution / Outils</h3>
+                <h3 class="bottom-title text-2xl mt-12">Distributions / Outils</h3>
                 <p class="corp text-lg pb-5 ">Linux - MacOs - Windows - VScode - MAMP - Suite Adobe - Shell/bash</p>
-            </section>  
+            </section> 
+
             <section id="myAchievements" class="background-section h-auto w-screen py-7 px-3">
                 <h2 class="text-3xl my-8 title">Mes réalisations</h2>
                 <p class="corp text-lg pb-5 ">Voici les projets concrets que j’ai pu réaliser, certains sont encore en développement.</p>
-                <div class="bg-wwiDEV-background bg-cover bg-center bg-red-500 h-72 w-full flex items-end">
-                    <div id="project-bar" class="bg-red-500 h-16 w-full flex justify-around items-center">
-                        <a class="text-white font-semibold">Visiter</a>
-                        <button class="text-white font-semibold">Détails</button>
+
+                <!--WWIDEV BACKEND-->
+                <div class="bg-wwiDEV-background mt-20 bg-cover bg-center h-72 w-full flex flex-col justify-between">
+                    <div class="flex justify-center items-center button  h-10">
+                        <p class="text-xl">wwiDEV API (backend)</p>
+                    </div>
+                    <div id="project-bar" class=" h-16 w-full flex justify-around items-center">
+                        <a class="text-white font-semibold line-through">Visiter le site</a>
+                        <button id="button-popup-wwiDEV-backend" value="off" class="text-white font-semibold"> + de détails</button>
                     </div>
                 </div>
-            </section>    
+                <div id="popup-wwiDEV-backend" class="dialog-close">
+                        <img src="./images/projects/wwiDEV/wwiDEV-logo.png" alt="logo-wwi-dev" class="w-48 h-20"/>
+                        <p class="corp text-sm pb-5" >wwiDEV (we work into development) est un blog destiné à mettre en pratique mes connaissances en utiliseant la MERN stack. Le backend a été pensé comme un micro service pour me donner par la suite la possibilité de créer une application React Native et d'executer des requêtes directement à cette même API.</p>
+                        <div class="flex flex-col w-full">
+                            <p class="etiquette text-base p-3">framework/librairie/ORM</p>
+                            <p class="corp text-sm pb-5 mb-5">MySQL - Express.js - Sequelize - Node.js</p>
+                            <p class="text-sm font-semibold">Version : 1.0</p>
+                            <p class="text-sm font-semibold">État : en développement</p>
+                        </div>
+                        <a class="w-52 mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-xl">Accéder au Github du projet</a>
+                        <a class="w-52 button-link-dont-work bg-red-500 text-white rounded-lg p-3 text-center font-semibold shadow-xl line-through">Accéder au site wwiDEV</a>
+                </div> 
+
+                <!--WWIDEV FRONTEND-->
+                <div class="bg-wwiDEV-background mt-20 bg-cover bg-center h-72 w-full flex flex-col justify-between">
+                    <div class="flex justify-center items-center button  h-10">
+                        <p class="text-xl">wwiDEV App React.js</p>
+                    </div>
+                    <div id="project-bar" class=" h-16 w-full flex justify-around items-center">
+                        <a class="text-white font-semibold line-through">Visiter le site</a>
+                        <button id="button-popup-wwiDEV-frontend" value="off" class="text-white font-semibold"> + de détails</button>
+                    </div>
+                </div>
+                <div id="popup-wwiDEV-frontend" class="dialog-close">
+                    <img src="./images/projects/wwiDEV/wwiDEV-logo.png" alt="logo-wwi-dev" class="w-48 h-20"/>
+                    <p class="corp text-sm pb-5" >wwiDEV (we work into development) est un blog destiné à mettre en pratique mes connaissances en utiliseant la MERN stack et également à rédiger des articles/nouceautés du développement web au moment voulu.</p>
+                    <div class="flex flex-col w-full">
+                        <p class="etiquette text-base p-3">framework/librairie/ORM</p>
+                        <p class="corp text-sm pb-5 mb-5">React.js - Vite.js</p>
+                        <p class="text-sm font-semibold">Version : 1.0</p>
+                        <p class="text-sm font-semibold">État : en développement</p>
+                    </div>
+                    <a class="w-52 mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-xl">Accéder au Github du projet</a>
+                    <a class="w-52 button-link-dont-work bg-red-500 text-white rounded-lg p-3 text-center font-semibold shadow-xl line-through">Accéder au site wwiDEV</a>
+                </div> 
+
+                <!--PYJAMZZ-->
+                <div class="bg-pyjamzz-background mt-20 bg-cover bg-center h-72 w-full flex flex-col justify-between">
+                    <div class="flex justify-center items-center button  h-10">
+                        <p class="text-xl">Pyjam'zz</p>
+                    </div>
+                    <div id="project-bar" class=" h-16 w-full flex justify-around items-center">
+                        <a class="text-white font-semibold line-through">Visiter le site</a>
+                        <button id="button-popup-pyjamzz" value="off" class="text-white font-semibold"> + de détails</button>
+                    </div>
+                </div>
+                <div id="popup-pyjamzz" class="dialog-close">
+                    <img src="./images/projects/pyjamzz/LogoPY.png" alt="logo-wwi-dev" class="w-20 h-20"/>
+                    <p class="corp text-sm pb-5" >Pyjam'zz est une application web qui permettra à ma cliente de vendre en ligne ses pyjamas. Il à également servi de projet lors du passage de mon titre RNCP.</p>
+                    <div class="flex flex-col w-full">
+                        <p class="etiquette text-base p-3">framework/librairie/ORM</p>
+                        <p class="corp text-sm pb-5 mb-5">Mysql - Sequelize - Express.js - React.js - Node.js</p>
+                        <p class="text-sm font-semibold">Version : 1.0</p>
+                        <p class="text-sm font-semibold">État : en développement</p>
+                    </div>
+                    <a class="w-52 mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-xl">Accéder au Github du projet</a>
+                    <a class="w-52 button-link-dont-work bg-red-500 text-white rounded-lg p-3 text-center font-semibold shadow-xl line-through">Accéder au site de Pyjam'zz</a>
+                </div> 
+            </section>  
+
+            <section id="#contactMe" class=" h-auto w-screen py-12 px-3">
+                <h2 class="text-3xl my-8 title">Me contacter</h2>
+                <h3 class="bottom-title text-2xl my-12">sur les réseaux ou par mail</h3>
+                <div class="flex flex-row justify-around w-5/6 m-auto">
+                    <a href=""><img class="w-16 h-auto button rounded-full" src="./images/icon/twitter-icon.svg"  alt="link-icon-twitter"/></a>
+                    <a href=""><img class="w-16 h-auto button rounded-full" src="./images/icon/whatsapp-icon.svg" alt="link-icon-whatsapp"/></a>
+                    <a href=""><img class="w-16 h-auto button rounded-full" src="./images/icon/github-icon.svg" alt="link-icon-github"/></a>
+                    <a href=""><img class="w-16 h-auto button rounded-full" src="./images/icon/linkedin-icon.svg" alt="link-icon-linkedin"/></a>
+                    <a href=""><img class="w-16 h-auto button rounded-full" src="./images/icon/email-contact.svg" alt="link-icon-email"/></a>
+                </div>
+                <h3 class="bottom-title text-2xl my-12">via le formulaire</h3>
+                <form action="" class="w-5/6 flex flex-col items-center m-auto">
+                    <div class="form-section flex flex-col items-center mb-8">
+                        <label class="corp text-sm " for="company">Votre entreprise</label>
+                        <input placeholder="Entreprise" name="company" type="text" class="">
+                    </div>
+                    <div class="form-section flex flex-col items-center mb-8">
+                        <label class="corp text-sm " for="email">Votre email</label>
+                        <input placeholder="Email" name="email" type="email" class="">
+                    </div>
+                    <div class="form-section flex flex-col items-center mb-8">
+                        <label class="corp text-sm " for="name">Votre nom</label>
+                        <input placeholder="Nom" name="name" type="text" class="">
+                    </div>
+                    <div class="form-section flex flex-col items-center mb-8">
+                        <label class="corp text-sm " for="message">Votre message</label>
+                        <textarea placeholder="Message" name="message" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <button type="submit" class="button w-52 mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-xl">Envoyer</button>
+                </form>
+            </section> 
+            <footer class="p-8 flex justify-center">
+                <p class="text-sm"> Portfolio de M. Hubert Tony -  2022/2023 </p>
+            </footer> 
         </main>
         <script src="./script.js" defer></script>
     </body>

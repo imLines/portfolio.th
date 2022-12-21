@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         'home-background': "url('../images/background-home.png')",
-        'wwiDEV-background': "url('../images/projects/wwiDEV/wwiDEV-background.png')"
+        'wwiDEV-background': "url('../images/projects/wwiDEV/wwiDEV-background.png')",
+        'pyjamzz-background': "url('../images/projects/pyjamzz/BackgroundPY.png')"
       },
     },
 

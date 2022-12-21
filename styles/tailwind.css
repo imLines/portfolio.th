@@ -39,21 +39,64 @@
     color: #fff;
 }
 
-.blur-background-content {
-    color: #eeeeee;
-    font-weight: bold;
-    border: 3px solid #cccccc;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    padding: 20px;
-    text-align: center;
-  }
+.form-section input{
+    background-color: #E5EDF9;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    width: 70%;
+    padding: 5px;
+}
+.form-section  textarea{
+    background-color: #E5EDF9;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    width: 95%;
+    padding: 5px;
+}
 
-  #project-bar{
+footer{
+    background-color: #050D18;
+    color: #E5EDF9;
+}
+header{
+    background-color: #050D18;
+}
+
+
+
+#project-bar{
     background-color: rgba(35, 158, 219, 0.8);
+}
+
+
+.dialog-open{
+    background-color: #fff;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    border: #239EDB solid 3px;
+}
+.dialog-close{
+    display: none;
+}
+
+
+.close-popup{
+    background-image: url('../images/icon/cross-white.png');
+    background-position: center;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    background-color: #050D18;
+    padding: 15px;
+    border-radius: 7px;
+    margin-left: 90%;
+    
 }
 
 /*
