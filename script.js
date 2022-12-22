@@ -75,3 +75,19 @@ buttonPopupPyjamzz.addEventListener('click', ()=>{
         buttonPopupPyjamzz.value = 'off';
     }
 })
+
+/* FORM SUBMIT */
+const form = document.querySelector('form');
+form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', 'contact.php', true)
+    // xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.onload = function () {
+        //récuperer infos dans la propriété responseText de l'objet xhr
+        
+    };
+    xhr.send(new FormData(form));
+  return false;
+
+})

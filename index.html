@@ -232,23 +232,25 @@
                     <a href=""><img class="w-16 h-auto button rounded-full" src="./images/icon/email-contact.svg" alt="link-icon-email"/></a>
                 </div>
                 <h3 class="bottom-title text-2xl my-12">via le formulaire</h3>
-                <form action="" class="w-5/6 flex flex-col items-center m-auto">
+
+                <form id="form" class="w-5/6 flex flex-col items-center m-auto">
                     <div class="form-section flex flex-col items-center mb-8">
                         <label class="corp text-sm " for="company">Votre entreprise</label>
                         <input placeholder="Entreprise" name="company" type="text" class="">
                     </div>
                     <div class="form-section flex flex-col items-center mb-8">
-                        <label class="corp text-sm " for="email">Votre email</label>
-                        <input placeholder="Email" name="email" type="email" class="">
+                        <label class="corp text-sm " for="email">Votre email *</label>
+                        <input placeholder="Email" name="email" type="email" class="" required>
                     </div>
                     <div class="form-section flex flex-col items-center mb-8">
-                        <label class="corp text-sm " for="name">Votre nom</label>
-                        <input placeholder="Nom" name="name" type="text" class="">
+                        <label class="corp text-sm " for="name">Votre nom *</label>
+                        <input placeholder="Nom" name="name" type="text" class="" required>
                     </div>
                     <div class="form-section flex flex-col items-center mb-8">
-                        <label class="corp text-sm " for="message">Votre message</label>
-                        <textarea placeholder="Message" name="message" id="" cols="30" rows="10"></textarea>
+                        <label class="corp text-sm " for="message">Votre message *</label>
+                        <textarea placeholder="Message" name="message" id="" cols="30" rows="10" required></textarea>
                     </div>
+                    <p class="corp text-sm text-red-500">* : champs obligatoires.</p>
                     <button type="submit" class="button w-52 mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-xl">Envoyer</button>
                 </form>
             </section> 
