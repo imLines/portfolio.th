@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 *{
-    font-family: 'Poppins', sans-serif;}
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-width{
+    width: 45vw;
+}
 
 .title{
     color: #19426B;
@@ -37,6 +41,13 @@
 .button{
     background-color: #239EDB;
     color: #fff;
+    box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.button:hover{
+    box-shadow: none;
+
 }
 
 .form-section input{
@@ -50,7 +61,7 @@
     background-color: #E5EDF9;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    width: 95%;
+    width: 90%;
     padding: 5px;
 }
 
@@ -62,12 +73,39 @@ header{
     background-color: #050D18;
 }
 
-
-
-#project-bar{
-    background-color: rgba(35, 158, 219, 0.8);
+.banner{
+    background-color: rgb(35, 158, 219);
+    font-weight: 900;
+    color: white;
 }
 
+#project-bar{
+    background-color: rgba(35, 158, 219, 0.4);
+}
+
+#project-bar a{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#project-bar a:hover{
+    background-color: rgb(35, 158, 219);
+    cursor: pointer;
+}
+
+#project-bar button{
+    height: 100%;
+    width: 50%;
+}
+
+#project-bar button:hover{
+    background-color: rgb(35, 158, 219);
+    cursor: pointer;
+
+}
 
 .dialog-open{
     background-color: #fff;
@@ -81,10 +119,10 @@ header{
     padding: 20px;
     border: #239EDB solid 3px;
 }
+
 .dialog-close{
     display: none;
 }
-
 
 .close-popup{
     background-image: url('../images/icon/cross-white.png');

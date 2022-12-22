@@ -7,10 +7,8 @@ const menu = document.querySelector('header');
 const main = document.querySelector('main');
 const navLink = document.getElementsByClassName('nav-link');
 
-/* max-h-screen h-screen */
-
 function closeOrOpenNavbar(){
-    menu.className = toggle.checked ? ' w-4/5  flex flex-col items-center  fixed h-full min-h-screen overflow-y-scroll' : 'hidden';
+    menu.className = toggle.checked ? ' fixed h-screen header-width flex flex-col items-center justify-start overflow-y-scroll' : 'hidden';
     if(toggle.checked){
         buttonOfHamburger.src = '../images/icon/cross-white.png';
     }else{
@@ -78,14 +76,48 @@ buttonPopupPyjamzz.addEventListener('click', ()=>{
 
 /* FORM SUBMIT */
 const form = document.querySelector('form');
+
+function showSuccessMessage(successMessage){
+    const successMessageContainer = document.getElementById('success-message-container');
+    const paragrapheSuccessMessage = document.getElementById('p-for-success-message');
+    successMessageContainer.classList.replace('hidden', 'block')
+    paragrapheSuccessMessage.innerHTML = successMessage
+    form.style.display = 'none'
+}
+
+function badRequest(errorMessage){
+    const errorMessageContainer = document.getElementById('error-message-container');
+    const paragrapheErrorMessage = document.getElementById('p-for-error-message');
+    errorMessageContainer.classList.replace('hidden', 'block')
+    paragrapheErrorMessage.innerText = errorMessage
+}
+
+function showServerErrorMessage(errorMessage, messageForSend){
+    const urMessage = document.getElementById('ur-message');
+    const errorMessageContainer = document.getElementById('error-message-container');
+    const paragrapheErrorMessage = document.getElementById('p-for-error-message');
+    errorMessageContainer.classList.replace('hidden', 'block');
+    form.style.display = 'none';
+    paragrapheErrorMessage.innerText = errorMessage+'\nVous pouvez copier coller votre message pour éviter de le réécrire.\n';
+    urMessage.innerText = 'Votre message:\n'+messageForSend;
+}
+
+
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
+    const userMessage = document.getElementsByTagName('textarea');
+    const messageForSend = userMessage.message.value;
     let xhr = new XMLHttpRequest();
     xhr.open('POST', 'contact.php', true)
     // xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.onload = function () {
-        //récuperer infos dans la propriété responseText de l'objet xhr
-        
+        if(xhr.status == 200){
+            return showSuccessMessage(xhr.responseText)
+        }else if(xhr.status == 400){
+            return badRequest(xhr.responseText)
+        }else{
+            return showServerErrorMessage(xhr.responseText, messageForSend)
+        }
     };
     xhr.send(new FormData(form));
   return false;
