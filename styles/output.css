@@ -540,6 +540,11 @@ video {
   margin-bottom: 2rem;
 }
 
+.mx-9{
+  margin-left: 2.25rem;
+  margin-right: 2.25rem;
+}
+
 .my-12{
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -573,16 +578,20 @@ video {
   margin-top: 1.75rem;
 }
 
-.mt-20{
-  margin-top: 5rem;
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
 }
 
 .mb-5{
   margin-bottom: 1.25rem;
 }
 
-.mb-8{
-  margin-bottom: 2rem;
+.mt-8{
+  margin-top: 2rem;
 }
 
 .flex{
@@ -625,8 +634,8 @@ video {
   height: 12rem;
 }
 
-.h-72{
-  height: 18rem;
+.h-52{
+  height: 13rem;
 }
 
 .h-16{
@@ -665,8 +674,8 @@ video {
   width: 12rem;
 }
 
-.w-52{
-  width: 13rem;
+.w-auto{
+  width: auto;
 }
 
 .w-20{
@@ -748,11 +757,6 @@ video {
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -818,9 +822,9 @@ video {
   padding-bottom: 1.75rem;
 }
 
-.px-3{
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .py-12{
@@ -866,11 +870,6 @@ video {
   line-height: 1.25rem;
 }
 
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .font-semibold{
   font-weight: 600;
 }
@@ -905,7 +904,11 @@ video {
 }
 
 .header-width{
-  width: 45vw;
+  width: auto;
+}
+
+#button-hamburger{
+  z-index: 25;
 }
 
 .title{
@@ -915,6 +918,7 @@ video {
           text-decoration: underline 5px;
   text-underline-offset: 15px;
   text-decoration-color: #239EDB;
+  line-height: 4rem;
 }
 
 .bottom-title{
@@ -930,6 +934,7 @@ video {
   background-color: #E5EDF9;
   width: -moz-fit-content;
   width: fit-content;
+  font-weight: 500;
 }
 
 .corp{
@@ -945,21 +950,20 @@ video {
 
 .button:hover{
   box-shadow: none;
+  cursor: pointer;
 }
 
 .form-section input{
   background-color: #E5EDF9;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
-  width: 70%;
-  padding: 5px;
+  padding: 10px;
 }
 
 .form-section  textarea{
   background-color: #E5EDF9;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
-  width: 90%;
   padding: 5px;
 }
 
@@ -968,7 +972,7 @@ footer{
   color: #E5EDF9;
 }
 
-header{
+header, #button-hamburger{
   background-color: #050D18;
 }
 
@@ -1005,33 +1009,44 @@ header{
   cursor: pointer;
 }
 
-.dialog-open{
-  background-color: #fff;
-  margin: auto;
+.overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.dialog-open{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
   height: auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 20px;
-  border: #239EDB solid 3px;
+  padding: 3%;
+  border: #239EDB solid 5px;
+}
+
+.close-text{
+  text-decoration: underline;
+  margin-left: 90%;
 }
 
 .dialog-close{
   display: none;
-}
-
-.close-popup{
-  background-image: url('../images/icon/cross-white.png');
-  background-position: center;
-  background-size: cover;
-  height: 40px;
-  width: 40px;
-  background-color: #050D18;
-  padding: 15px;
-  border-radius: 7px;
-  margin-left: 90%;
 }
 
 /*
@@ -1046,3 +1061,73 @@ colors: {
     },
 
 */
+
+@media (min-width: 768px){
+  .md\:h-72{
+    height: 18rem;
+  }
+
+  .md\:w-96{
+    width: 24rem;
+  }
+
+  .md\:w-2\/4{
+    width: 50%;
+  }
+
+  .md\:w-3\/4{
+    width: 75%;
+  }
+
+  .md\:flex-row{
+    flex-direction: row;
+  }
+
+  .md\:flex-wrap{
+    flex-wrap: wrap;
+  }
+
+  .md\:justify-center{
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:w-3\/5{
+    width: 60%;
+  }
+
+  .lg\:w-4\/5{
+    width: 80%;
+  }
+
+  .lg\:text-8xl{
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .lg\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .lg\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}

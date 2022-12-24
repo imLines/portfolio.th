@@ -8,7 +8,7 @@ const main = document.querySelector('main');
 const navLink = document.getElementsByClassName('nav-link');
 
 function closeOrOpenNavbar(){
-    menu.className = toggle.checked ? ' fixed h-screen header-width flex flex-col items-center justify-start overflow-y-scroll' : 'hidden';
+    menu.className = toggle.checked ? 'fixed h-screen w-min p-8 header-width flex flex-col items-center justify-start overflow-y-scroll' : 'hidden';
     if(toggle.checked){
         buttonOfHamburger.src = '../images/icon/cross-white.png';
     }else{
@@ -25,53 +25,60 @@ for (var i = 0; i < navLink.length; i++) {
         toggle.checked = false;
     });
 }
+/* POPUP */
+const overlay = document.getElementById('overlay');
 
 /* POPUP WWIDEV BACKEND*/
 const buttonPopupWwidevBackend = document.getElementById('button-popup-wwiDEV-backend');
 const popupWwidevBackend = document.getElementById('popup-wwiDEV-backend');
+const buttonClosePopupWwidevBackend = document.getElementById('button-close-popup-wwidev-backend');
 
 buttonPopupWwidevBackend.addEventListener('click', ()=>{
-    if(buttonPopupWwidevBackend.value == 'off'){
-        buttonPopupWwidevBackend.innerHTML = " - de détails"
-        popupWwidevBackend.className = 'dialog-open'
-        buttonPopupWwidevBackend.value = 'on'
-    }else if (buttonPopupWwidevBackend.value == 'on'){
-        buttonPopupWwidevBackend.innerHTML = " + de détails"
-        popupWwidevBackend.className = 'dialog-close'
-        buttonPopupWwidevBackend.value = 'off';
-    }
+    popupWwidevBackend.className = 'dialog-open'
+    html.style.overflow = 'hidden';
+    overlay.style.display = 'block';
 })
+buttonClosePopupWwidevBackend.addEventListener('click', ()=>{
+    popupWwidevBackend.className = 'dialog-close'
+    html.style.overflow = 'scroll';
+    overlay.style.display = 'none';
+
+})
+
 
 /* POPUP WWIDEV FRONTEND */
 const buttonPopupWwidevFrontend = document.getElementById('button-popup-wwiDEV-frontend');
 const popupWwidevFrontend = document.getElementById('popup-wwiDEV-frontend');
+const buttonClosePopupWwidevFrontend = document.getElementById('button-close-popup-wwidev-frontend');
 
 buttonPopupWwidevFrontend.addEventListener('click', ()=>{
-    if(buttonPopupWwidevFrontend.value == 'off'){
-        buttonPopupWwidevFrontend.innerHTML = " - de détails"
-        popupWwidevFrontend.className = 'dialog-open'
-        buttonPopupWwidevFrontend.value = 'on'
-    }else if (buttonPopupWwidevFrontend.value == 'on'){
-        buttonPopupWwidevFrontend.innerHTML = " + de détails"
-        popupWwidevFrontend.className = 'dialog-close'
-        buttonPopupWwidevFrontend.value = 'off';
-    }
+    popupWwidevFrontend.className = 'dialog-open'
+    html.style.overflow = 'hidden';
+    overlay.style.display = 'block';
 })
+buttonClosePopupWwidevFrontend.addEventListener('click', ()=>{
+    popupWwidevFrontend.className = 'dialog-close'
+    html.style.overflow = 'scroll';
+    overlay.style.display = 'none';
+    
+})
+
 
 /* POPUP PYJAM'ZZ */
 const buttonPopupPyjamzz = document.getElementById('button-popup-pyjamzz');
 const popupPyjamzz = document.getElementById('popup-pyjamzz');
+const buttonClosePopupFontend = document.getElementById('button-close-popup-pyjamzz');
 
 buttonPopupPyjamzz.addEventListener('click', ()=>{
-    if(buttonPopupPyjamzz.value == 'off'){
-        buttonPopupPyjamzz.innerHTML = " - de détails"
-        popupPyjamzz.className = 'dialog-open'
-        buttonPopupPyjamzz.value = 'on'
-    }else if (buttonPopupPyjamzz.value == 'on'){
-        buttonPopupPyjamzz.innerHTML = " + de détails"
-        popupPyjamzz.className = 'dialog-close'
-        buttonPopupPyjamzz.value = 'off';
-    }
+    popupPyjamzz.className = 'dialog-open'
+    html.style.overflow = 'hidden';
+    overlay.style.display = 'block';
+})
+buttonClosePopupFontend.addEventListener('click', ()=>{
+    popupPyjamzz.className = 'dialog-close'
+    html.style.overflow = 'scroll';
+    overlay.style.display = 'none';
+    
 })
 
 /* FORM SUBMIT */
@@ -84,21 +91,19 @@ function showSuccessMessage(successMessage){
     paragrapheSuccessMessage.innerHTML = successMessage
     form.style.display = 'none'
 }
-
 function badRequest(errorMessage){
     const errorMessageContainer = document.getElementById('error-message-container');
     const paragrapheErrorMessage = document.getElementById('p-for-error-message');
     errorMessageContainer.classList.replace('hidden', 'block')
     paragrapheErrorMessage.innerText = errorMessage
 }
-
-function showServerErrorMessage(errorMessage, messageForSend){
+function showServerErrorMessage(messageForSend){
     const urMessage = document.getElementById('ur-message');
     const errorMessageContainer = document.getElementById('error-message-container');
     const paragrapheErrorMessage = document.getElementById('p-for-error-message');
     errorMessageContainer.classList.replace('hidden', 'block');
     form.style.display = 'none';
-    paragrapheErrorMessage.innerText = errorMessage+'\nVous pouvez copier coller votre message pour éviter de le réécrire.\n';
+    paragrapheErrorMessage.innerText = 'Désolé ce serveur a rencontré un problème. Veuillez utiliser un autre moyen de contact.\nVous pouvez copier coller votre message pour éviter de le réécrire.\n';
     urMessage.innerText = 'Votre message:\n'+messageForSend;
 }
 
@@ -116,7 +121,7 @@ form.addEventListener('submit', (e)=>{
         }else if(xhr.status == 400){
             return badRequest(xhr.responseText)
         }else{
-            return showServerErrorMessage(xhr.responseText, messageForSend)
+            return showServerErrorMessage(messageForSend)
         }
     };
     xhr.send(new FormData(form));

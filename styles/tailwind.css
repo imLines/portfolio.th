@@ -8,8 +8,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 .header-width{
-    width: 45vw;
+    width: auto;
+}
+
+#button-hamburger{
+    z-index: 25;
 }
 
 .title{
@@ -18,6 +23,7 @@
     text-decoration: underline 5px;
     text-underline-offset: 15px;
     text-decoration-color: #239EDB;
+    line-height: 4rem;
 }
 
 .bottom-title{
@@ -32,6 +38,7 @@
 .etiquette{
     background-color: #E5EDF9;
     width: fit-content;
+    font-weight: 500;
 }
 
 .corp{
@@ -47,21 +54,19 @@
 
 .button:hover{
     box-shadow: none;
-
+    cursor: pointer;
 }
 
 .form-section input{
     background-color: #E5EDF9;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    width: 70%;
-    padding: 5px;
+    padding: 10px;
 }
 .form-section  textarea{
     background-color: #E5EDF9;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    width: 90%;
     padding: 5px;
 }
 
@@ -69,7 +74,7 @@ footer{
     background-color: #050D18;
     color: #E5EDF9;
 }
-header{
+header, #button-hamburger{
     background-color: #050D18;
 }
 
@@ -106,36 +111,48 @@ header{
     cursor: pointer;
 
 }
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
 
 .dialog-open{
-    background-color: #fff;
-    margin: auto;
-    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
     height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px;
-    border: #239EDB solid 3px;
+    padding: 3%;
+    border: #239EDB solid 5px;
 }
+
+.close-text{
+    text-decoration: underline;
+    margin-left: 90%;
+}
+
 
 .dialog-close{
     display: none;
 }
 
-.close-popup{
-    background-image: url('../images/icon/cross-white.png');
-    background-position: center;
-    background-size: cover;
-    height: 40px;
-    width: 40px;
-    background-color: #050D18;
-    padding: 15px;
-    border-radius: 7px;
-    margin-left: 90%;
-    
-}
+
 
 /*
 colors: {
