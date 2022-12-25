@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'home-background': "url('../images/background-home.png')",
+        'home-background': "url('../images/background-hills.png')",
         'wwiDEV-background': "url('../images/projects/wwiDEV/wwiDEV-background.png')",
         'pyjamzz-background': "url('../images/projects/pyjamzz/BackgroundPY.png')"
       },

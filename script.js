@@ -8,7 +8,7 @@ const main = document.querySelector('main');
 const navLink = document.getElementsByClassName('nav-link');
 
 function closeOrOpenNavbar(){
-    menu.className = toggle.checked ? 'fixed h-screen w-min p-8 header-width flex flex-col items-center justify-start overflow-y-scroll overflow-x-hidden lg:fixed lg:h-screen lg:p-8 lg:w-80 lg:flex lg:flex-col lg:items-center lg:justify-start lg:overflow-y-auto lg:overflow-x-hidden' : 'hidden lg:fixed lg:h-screen lg:p-8 lg:w-80 lg:flex lg:flex-col lg:items-center lg:justify-start lg:overflow-y-auto lg:overflow-x-hidden';
+    menu.className = toggle.checked ? 'fixed h-screen w-min p-8 header-width flex flex-col items-center justify-start overflow-y-scroll overflow-x-hidden lg:fixed lg:h-screen lg:p-8 lg:w-80 lg:flex lg:flex-col lg:items-center lg:justify-start lg:overflow-y-auto lg:overflow-x-hidden z-50' : 'hidden lg:fixed lg:h-screen lg:p-8 lg:w-80 lg:flex lg:flex-col lg:items-center lg:justify-start lg:overflow-y-auto lg:overflow-x-hidden z-50';
     if(toggle.checked){
         buttonOfHamburger.src = '../images/icon/cross-white.png';
     }else{
@@ -150,3 +150,53 @@ form.addEventListener('submit', (e)=>{
   return false;
 
 })
+
+
+/**
+ * Animations
+ */
+
+/* FadIn */
+
+const callback = function (entries) {
+    entries.forEach((entry) => {  
+      if (entry.isIntersecting) {
+        console.log(entry)
+        entry.target.classList.add("animate-fadeIn");
+      } else {
+        //If unset comment in bottom, remove the animation for re add after
+        // entry.target.classList.remove("animate-fadeIn");
+      }
+    });
+  };
+  
+  const observer = new IntersectionObserver(callback);
+  
+  const targets = document.querySelectorAll(".animation-fadIn");
+  targets.forEach(function (target) {
+    target.classList.add("opacity-0");
+    observer.observe(target);
+  });
+
+  /* Spin for button to up top */
+const buttonToGoTop = document.getElementById('button-to-scroll-top');
+
+window.addEventListener("scroll", () => {
+      document.body.style.setProperty(
+        "--scroll",
+        window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+      );
+    },
+    false
+  );
+  
+const scrollToTop = () => {
+    buttonToGoTop.addEventListener("click", () => {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      }); 
+    });
+  };
+  scrollToTop();

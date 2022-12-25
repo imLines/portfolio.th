@@ -13,14 +13,17 @@
     <input type="checkbox" id="nav-toggle" class="hidden">
     <label for="nav-toggle"><img id="button-hamburger" src="./images/icon/menu-hamburger.png" class="w-12 h-12 rounded-full  top-3 right-3 p-2 fixed lg:hidden" /></label>
 
-    <header class="hidden overflow-x-hidden lg:fixed lg:h-screen lg:p-8 lg:w-80 lg:flex lg:flex-col lg:items-center lg:justify-start lg:overflow-y-auto lg:overflow-x-hidden">
+
+    <button id="button-to-scroll-top"></button>
+
+    <header class="hidden overflow-x-hidden lg:fixed lg:h-screen lg:p-8 lg:w-80 lg:flex lg:flex-col lg:items-center lg:justify-start lg:overflow-y-auto lg:overflow-x-hidden z-50">
         <div class="flex flex-col items-center w-full justify-around">
             <img class="w-32 h-32 bg-white mt-5 mb-3 rounded-full overflow-y-scroll" src="./images/emoji-smile.png"
                 alt="my-emoji">
             <h1 class="text-white text-lg lg:text-xl">Tony Hubert</h1>
             <div class="flex flex-row justify-center w-full"> 
-                <a href=""><img class="w-10 h-10 lg:w-14 lg:h-14" src="./images/icon/twitter-icon.svg" alt="link-icon-twitter" /></a>
-                <a href=""><img class="w-10 h-10 lg:w-14 lg:h-14" src="./images/icon/whatsapp-icon.svg" alt="link-icon-whatsapp" /></a>
+                <a href=""><img class="w-10 h-10 lg:w-14 lg:h-14 rounded-full transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500" src="./images/icon/twitter-icon.svg" alt="link-icon-twitter" /></a>
+                <a href=""><img class="w-10 h-10 lg:w-14 lg:h-14 rounded-full transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500" src="./images/icon/whatsapp-icon.svg" alt="link-icon-whatsapp" /></a>
                 <a href=""><img class="w-10 h-10 lg:w-14 lg:h-14" src="./images/icon/github-icon.svg" alt="link-icon-github" /></a>
                 <a href=""><img class="w-10 h-10 lg:w-14 lg:h-14" src="./images/icon/linkedin-icon.svg" alt="link-icon-linkedin" /></a>
             </div>
@@ -85,7 +88,7 @@
     </header>
 
     <main class="lg:ml-80  mr-0 overflow-x-hidden" >
-        <section id="home" class="bg-home-background bg-cover bg-center  w-screen h-screen flex items-center justify-center lg:w-full">
+        <section id="home" class="bg-home-background bg-cover bg-center  w-screen h-screen flex items-center justify-center lg:w-full animation-fadIn">
             <div class="flex flex-col items-start justify-center">
                 <h1 class="text-white text-6xl ml-8 lg:text-8xl">Tony Hubert</h1>
                 <h2 class="text-white text-2xl ml-8 lg:text-3xl">Développeur web Fullstack</h2>
@@ -93,8 +96,8 @@
         </section>
 
         <section id="whoIsMe" class="h-auto w-full py-7 px-6 lg:w-full">
-            <h2 class="text-3xl my-8 title lg:text-4xl">Qui suis-je ?</h2>
-            <p class="corp text-lg lg:text-xl">
+            <h2 class="text-3xl my-8 title lg:text-4xl animation-fadIn">Qui suis-je ?</h2>
+            <p class="corp text-lg lg:text-xl animation-fadIn">
                 Bienvenue ! <br />
                 Moi c’est Tony, j’ai 23 ans. Passionné depuis tout jeune par tout ce qui possède une carte-mère, j’ai
                 pris la décision de consacrer ma vie professionnelle au
@@ -103,8 +106,8 @@
                 développeur web.
             </p>
             <img src="./images/me-hand-up.png"
-                class="w-48 h-48 bg-white mt-5 mb-3 rounded-full m-auto border-2 border-black" alt="emoji-me" />
-            <p class="corp text-lg pb-5 lg:text-xl">
+                class="w-48 h-48 bg-white mt-5 mb-3 rounded-full m-auto border-2 border-black animation-fadIn" alt="emoji-me"/>
+            <p class="corp text-lg pb-5 lg:text-xl animation-fadIn">
                 J’ai finalisé ma reconversion en passant avec succès le titre RNCP « développeur web et web mobile »
                 (niveau bac+2). Depuis l’obtention de ce dernier, je finalise seul des projets personnels afin de
                 démontrer mes compétences et apprendre de nouvelles choses. La curiosité, la passion et l’acharnement
@@ -114,77 +117,77 @@
                 Tony
             </p>
             <div class="flex justify-center">
-                <a class="w-auto button rounded-lg p-3 text-center font-semibold text-lg lg:text-xl" href="#"
+                <a class="w-auto button rounded-lg p-3 text-center font-semibold text-lg lg:text-xl animation-fadIn transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500" href="#"
                     download>Télécharger mon CV</a>
             </div>
         </section>
         <section id="myRoad" class="background-section h-auto w-screen py-7 px-6 lg:w-full">
-            <h2 class="title text-3xl my-8 lg:text-4xl">Mon parcours</h2>
+            <h2 class="title text-3xl my-8 lg:text-4xl animation-fadIn">Mon parcours</h2>
 
-            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl">Découverte</h3>
-            <p class="etiquette text-lg p-3 lg:text-xl">janvier 2021-avril 2021</p>
-            <p class="corp text-lg pb-5 mt-7 lg:text-xl">Pendant ce temps, je profitais du temps après le travail pour
+            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl animation-fadIn">Découverte</h3>
+            <p class="etiquette text-lg p-3 lg:text-xl animation-fadIn">janvier 2021-avril 2021</p>
+            <p class="corp text-lg pb-5 mt-7 lg:text-xl animation-fadIn">Pendant ce temps, je profitais du temps après le travail pour
                 comprendre le fonctionnement des site, j’ai créé à ce moment là mes premières pages web en html/css.</p>
 
-            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl">Formation The Hacking Project</h3>
-            <p class="etiquette text-lg p-3 lg:text-xl">avril 2021-juin 2021</p>
-            <p class="corp text-lg pb-5 mt-7 lg:text-xl">À THP nous avons appris en 3 mois à développer des sites web
+            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl animation-fadIn">Formation The Hacking Project</h3>
+            <p class="etiquette text-lg p-3 lg:text-xl animation-fadIn">avril 2021-juin 2021</p>
+            <p class="corp text-lg pb-5 mt-7 lg:text-xl animation-fadIn">À THP nous avons appris en 3 mois à développer des sites web
                 statiques et dynamiques à l’aide de Ruby/RoR et html/css/javascript. Nous avons également à nous servir
                 de git/github et générer des requêtes SQL.</p>
 
-            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl">Formation en autodidacte</h3>
-            <p class="etiquette text-lg p-3 lg:text-xl">juillet 2021-avril 2022</p>
-            <p class="corp text-lg pb-5 mt-7 lg:text-xl">J’ai décidé à l’issu de la formation THP de continuer à
+            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl animation-fadIn">Formation en autodidacte</h3>
+            <p class="etiquette text-lg p-3 lg:text-xl animation-fadIn">juillet 2021-avril 2022</p>
+            <p class="corp text-lg pb-5 mt-7 lg:text-xl animation-fadIn">J’ai décidé à l’issu de la formation THP de continuer à
                 approfondir mes connaissances notamment en apprenant le Javascript, les bases de Python et les
                 différentes manière de développer un site web avec CodeCademy. J’ai suivi un certain nombre de
                 formations sur OpenClassRoom, tout particulièrement sur les notions de design de base mais aussi sur la
                 méthodologie AGILE.</p>
 
-            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl">Formation à Breizh Institut</h3>
-            <p class="etiquette text-lg p-3 lg:text-xl">mai 2021-octobre 2022</p>
-            <p class="corp text-lg pb-5 mt-7 lg:text-xl">N’ayant pas de diplôme qui puisse mettre en valeur les
+            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl animation-fadIn">Formation à Breizh Institut</h3>
+            <p class="etiquette text-lg p-3 lg:text-xl animation-fadIn">mai 2021-octobre 2022</p>
+            <p class="corp text-lg pb-5 mt-7 lg:text-xl animation-fadIn">N’ayant pas de diplôme qui puisse mettre en valeur les
                 compétences acquises jusqu’ici, j’ai décidé de suivre une formation de qualité et obtenir un titre RNCP.
                 Durant cette formation qui à durée 6 mois j’ai appris à utiliser le Php et son framework Synfony,
                 Node.js et son framework Express.js et encore React.js/React Native. J’ai poussé un peu plus le
                 Javascript Vanilla et appris à communiquer avec les API. Cette formation très enrichissante avec un
                 professeur très qualitatif m’as permis d’obtenir mon titre.</p>
 
-            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl">Recherche d’une entreprise</h3>
-            <p class="etiquette text-lg p-3 lg:text-xl">novembre 2021-maintenant</p>
-            <p class="corp text-lg pb-5 mt-7 lg:text-xl">Après mon examen, j’ai décider de développer des projets pour
+            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl animation-fadIn">Recherche d’une entreprise</h3>
+            <p class="etiquette text-lg p-3 lg:text-xl animation-fadIn">novembre 2021-maintenant</p>
+            <p class="corp text-lg pb-5 mt-7 lg:text-xl animation-fadIn">Après mon examen, j’ai décider de développer des projets pour
                 mettre en oeuvre mes compétences.
                 À l’heure d’aujourd’hui, je suis prêt à intégrer une entreprise et leur fournir un travail de qualité.
                 Je ne cesse d’apprendre avec plaisir afin de servir dans le camp backend et frontend tout en effectuant
                 une veille journalière pour rester à jour.</p>
         </section>
         <section id="myFlow" class=" h-auto w-screen py-12 px-6 lg:w-full">
-            <h2 class="title text-3xl my-8 lg:text-4xl">Mes compétences</h2>
+            <h2 class="title text-3xl my-8 lg:text-4xl animation-fadIn">Mes compétences</h2>
 
-            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl">Frontend</h3>
-            <p class="etiquette text-lg p-3 lg:text-xl">Languages</p>
-            <p class="corp text-lg pb-5 lg:text-xl">HTML - CSS - Javascript </p>
-            <p class="etiquette text-lg p-3 lg:text-xl">Framework / Librairie</p>
-            <p class="corp text-lg pb-5 lg:text-xl">Vite.js - Next.js - React.js - React Native - Bootstap - TailwindCSS
+            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl animation-fadIn">Frontend</h3>
+            <p class="etiquette text-lg p-3 lg:text-xl animation-fadIn">Languages</p>
+            <p class="corp text-lg pb-5 lg:text-xl animation-fadIn">HTML - CSS - Javascript </p>
+            <p class="etiquette text-lg p-3 lg:text-xl animation-fadIn">Framework / Librairie</p>
+            <p class="corp text-lg pb-5 lg:text-xl animation-fadIn">Vite.js - Next.js - React.js - React Native - Bootstap - TailwindCSS
             </p>
 
-            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl">Backend</h3>
-            <p class="etiquette text-lg p-3 lg:text-xl">Languages</p>
-            <p class="corp text-lg pb-5 lg:text-xl">PHP - Ruby - SQL</p>
-            <p class="etiquette text-lg p-3 lg:text-xl">Framework / Librairie / ORM</p>
-            <p class="corp text-lg pb-5 lg:text-xl">Symfony - RubyOnRails - Node.js - Express.js - Sequelize - Doctrine
+            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl animation-fadIn">Backend</h3>
+            <p class="etiquette text-lg p-3 lg:text-xl animation-fadIn">Languages</p>
+            <p class="corp text-lg pb-5 lg:text-xl animation-fadIn">PHP - Ruby - SQL</p>
+            <p class="etiquette text-lg p-3 lg:text-xl animation-fadIn">Framework / Librairie / ORM</p>
+            <p class="corp text-lg pb-5 lg:text-xl animation-fadIn">Symfony - RubyOnRails - Node.js - Express.js - Sequelize - Doctrine
             </p>
 
-            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl">Autres</h3>
-            <p class="corp text-lg pb-5 lg:text-xl">Wordpress - Git/Github - Sécurité - NPM</p>
+            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl animation-fadIn">Autres</h3>
+            <p class="corp text-lg pb-5 lg:text-xl animation-fadIn">Wordpress - Git/Github - Sécurité - NPM</p>
 
-            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl">Distributions / Outils</h3>
-            <p class="corp text-lg pb-5 lg:text-xl">Linux - MacOs - Windows - VScode - MAMP - Suite Adobe - Shell/bash
+            <h3 class="bottom-title text-2xl mt-12 lg:text-3xl animation-fadIn">Distributions / Outils</h3>
+            <p class="corp text-lg pb-5 lg:text-xl animation-fadIn">Linux - MacOs - Windows - VScode - MAMP - Suite Adobe - Shell/bash
             </p>
         </section>
 
         <section id="myAchievements" class="background-section h-auto w-screen py-7 px-6 lg:w-full">
-            <h2 class="text-3xl my-8 title lg:text-4xl">Mes réalisations</h2>
-            <p class="corp text-lg pb-5 lg:text-xl">Voici les projets concrets que j’ai pu réaliser, certains sont
+            <h2 class="text-3xl my-8 title lg:text-4xl animation-fadIn">Mes réalisations</h2>
+            <p class="corp text-lg pb-5 lg:text-xl animation-fadIn">Voici les projets concrets que j’ai pu réaliser, certains sont
                 encore en développement.</p>
 
             <div class="flex flex-col items-center w-full m-auto md:flex-row md:flex-wrap md:justify-center">
@@ -192,7 +195,7 @@
                 <div id="overlay" class="overlay"></div>
                 <!--WWIDEV BACKEND-->
 
-                <div class="bg-wwiDEV-background mx-9 flex flex-col justify-between bg-cover bg-center mb-6 w-full h-52 md:w-96 md:h-72 ">
+                <div class="bg-wwiDEV-background mx-9 flex flex-col justify-between bg-cover bg-center mb-6 w-full h-52 md:w-96 md:h-72 animation-fadIn">
                     <div class="flex justify-center items-center banner  h-auto text-center p-2 ">
                         <p class="text-xl lg:text-2xl">wwiDEV API (backend)</p>
                     </div>
@@ -200,7 +203,7 @@
                         <a class="text-white text-center font-semibold line-through text-lg lg:text-xl">Visiter le
                             site</a>
                         <button id="button-popup-wwiDEV-backend"
-                            class="text-white text-center font-semibold text-lg lg:text-xl"> + de détails</button>
+                            class="text-white text-center font-semibold text-lg lg:text-xl transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500"> + de détails</button>
                     </div>
                 </div>
                 <div id="popup-wwiDEV-backend" class="dialog-close">
@@ -217,16 +220,16 @@
                         <p class="text-lg font-semibold">État : en développement</p>
                     </div>
                     <a
-                        class="w-auto mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-x text-lg lg:text-xl">Accéder
+                        class="w-auto mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-x text-lg lg:text-xl transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500">Accéder
                         au Github du projet</a>
                     <a
-                        class="w-auto button-link-dont-work bg-red-500 text-white rounded-lg p-3 text-center font-semibold shadow-xl line-through text-lg lg:text-xl">Accéder
+                        class="w-auto button-link-dont-work bg-red-500 text-white rounded-lg p-3 text-center font-semibold shadow-xl line-through text-lg lg:text-xl ">Accéder
                         au site wwiDEV</a>
                 </div>
 
                 <!--WWIDEV FRONTEND-->
                 <div
-                    class="bg-wwiDEV-background mx-9 flex flex-col justify-between bg-cover bg-center mb-6 w-full h-52 md:w-96 md:h-72">
+                    class="bg-wwiDEV-background mx-9 flex flex-col justify-between bg-cover bg-center mb-6 w-full h-52 md:w-96 md:h-72 animation-fadIn">
                     <div class="flex justify-center items-center banner  h-auto text-center p-2">
                         <p class="text-xl lg:text-2xl">wwiDEV App React.js</p>
                     </div>
@@ -234,7 +237,7 @@
                         <a class="text-white font-semibold line-through text-center text-lg lg:text-xl">Visiter le
                             site</a>
                         <button id="button-popup-wwiDEV-frontend"
-                            class="text-white font-semibold text-center text-lg lg:text-xl"> + de détails</button>
+                            class="text-white font-semibold text-center text-lg lg:text-xl transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500"> + de détails</button>
                     </div>
                 </div>
                 <div id="popup-wwiDEV-frontend" class="dialog-close">
@@ -250,7 +253,7 @@
                         <p class="text-lg font-semibold">État : en développement</p>
                     </div>
                     <a
-                        class="w-auto mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-xl textlg lg:text-xl">Accéder
+                        class="w-auto mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-xl textlg lg:text-xl transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500">Accéder
                         au Github du projet</a>
                     <a
                         class="w-auto button-link-dont-work bg-red-500 text-white rounded-lg p-3 text-center font-semibold shadow-xl line-through text-lg lg:text-xl">Accéder
@@ -259,7 +262,7 @@
 
                 <!--PYJAMZZ-->
                 <div
-                    class="bg-pyjamzz-background mx-9 flex flex-col justify-between bg-cover bg-center mb-6 w-full h-52 md:w-96 md:h-72">
+                    class="bg-pyjamzz-background mx-9 flex flex-col justify-between bg-cover bg-center mb-6 w-full h-52 md:w-96 md:h-72 animation-fadIn">
                     <div class="flex justify-center items-center banner  h-auto text-center p-2">
                         <p class="text-xl lg:text-2xl">Pyjam'zz</p>
                     </div>
@@ -267,7 +270,7 @@
                         <a class="text-white font-semibold line-through text-center text-lg lg:text-xl">Visiter le
                             site</a>
                         <button id="button-popup-pyjamzz"
-                            class="text-white font-semibold text-center text-lg lg:text-xl"> + de détails</button>
+                            class="text-white font-semibold text-center text-lg lg:text-xl transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500"> + de détails</button>
                     </div>
                 </div>
                 <div id="popup-pyjamzz" class="dialog-close">
@@ -284,7 +287,7 @@
                         <p class="text-lg font-semibold">État : en développement</p>
                     </div>
                     <a
-                        class="w-auto mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-xl text-lg lg:text-xl">Accéder
+                        class="w-auto mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-xl text-lg lg:text-xl transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500">Accéder
                         au Github du projet</a>
                     <a
                         class="w-auto button-link-dont-work bg-red-500 text-white rounded-lg p-3 text-center font-semibold shadow-xl line-through text-lg lg:text-xl">Accéder
@@ -295,36 +298,36 @@
         </section>
 
         <section id="contactMe" class=" h-auto w-screen py-12 px-6 lg:w-full">
-            <h2 class="text-3xl my-8 title lg:text-4xl">Me contacter</h2>
-            <h3 class="bottom-title text-2xl my-12 lg:text-3xl">sur les réseaux ou par mail</h3>
-            <div class="flex flex-row justify-around w-full lg:w-3/5 m-auto">
-                <a href=""><img class="w-16 h-auto button rounded-full p-2" src="./images/icon/twitter-icon.svg"
+            <h2 class="text-3xl my-8 title lg:text-4xl animation-fadIn">Me contacter</h2>
+            <h3 class="bottom-title text-2xl my-12 lg:text-3xl animation-fadIn">sur les réseaux ou par mail</h3>
+            <div class="flex flex-row justify-around w-full lg:w-3/5 m-auto link-contact-container animation-fadIn">
+                <a href=""><img class="w-16 h-auto button rounded-full p-2 transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500" src="./images/icon/twitter-icon.svg"
                         alt="link-icon-twitter" /></a>
-                <a href=""><img class="w-16 h-auto button rounded-full p-2" src="./images/icon/whatsapp-icon.svg"
+                <a href=""><img class="w-16 h-auto button rounded-full p-2 transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500" src="./images/icon/whatsapp-icon.svg"
                         alt="link-icon-whatsapp" /></a>
-                <a href=""><img class="w-16 h-auto button rounded-full p-2" src="./images/icon/github-icon.svg"
+                <a href=""><img class="w-16 h-auto button rounded-full p-2 transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500" src="./images/icon/github-icon.svg"
                         alt="link-icon-github" /></a>
-                <a href=""><img class="w-16 h-auto button rounded-full p-2" src="./images/icon/linkedin-icon.svg"
+                <a href=""><img class="w-16 h-auto button rounded-full p-2 transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500" src="./images/icon/linkedin-icon.svg"
                         alt="link-icon-linkedin" /></a>
-                <a href=""><img class="w-16 h-auto button rounded-full p-2" src="./images/icon/email-contact.svg"
+                <a href=""><img class="w-16 h-auto button rounded-full p-2 transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500" src="./images/icon/email-contact.svg"
                         alt="link-icon-email" /></a>
             </div>
-            <h3 class="bottom-title text-2xl my-12 lg:text-3xl">via le formulaire</h3>
-            <p class="corp text-sm text-red-500 my-8 lg:text-lg">* : champs obligatoires.</p>
+            <h3 class="bottom-title text-2xl my-12 lg:text-3xl animation-fadIn">via le formulaire</h3>
+            <p class="corp text-sm text-red-500 my-8 lg:text-lg animation-fadIn">* : champs obligatoires.</p>
 
             <div id="success-message-container"
-                class="m-auto p-10 border-4 w-10/12 bg-green-400 border-green-500 rounded-lg hidden">
+                class="m-auto p-10 border-4 w-10/12 bg-green-400 border-green-500 rounded-lg hidden animation-fadIn">
                 <p id="p-for-success-message" class="text-white text-lg lg:text-xl"></p>
             </div>
             <div id="error-message-container"
-                class="m-auto  p-10 border-4 w-10/12  bg-red-400 border-red-500 rounded-lg hidden">
+                class="m-auto  p-10 border-4 w-10/12  bg-red-400 border-red-500 rounded-lg hidden animation-fadIn">
                 <p id="p-for-error-message" class="text-white text-lg lg:text-xl"></p>
             </div>
             <div class="m-auto w-10/12">
                 <p class="corp text-lg lg:text-xl" id="ur-message"></p>
             </div>
 
-            <form id="form" class="w-full flex flex-col items-center m-auto lg:w-3/5 ">
+            <form id="form" class="w-full flex flex-col items-center m-auto lg:w-3/5 animation-fadIn">
                 <div class="form-section flex flex-col items-center mb-8 w-full ">
                     <label class="corp text-lg lg:text-xl" for="company">Votre entreprise</label>
                     <input class="w-full md:w-2/4 lg:w-3/5" placeholder="Entreprise" name="company" type="text"
@@ -344,7 +347,7 @@
                         required></textarea>
                 </div>
                 <button type="submit"
-                    class="button w-auto mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-xl text-lg lg:text-xl">Envoyer</button>
+                    class="button w-auto mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-xl text-lg lg:text-xl transition-all duration-150 ease-in-out delay-75 hover:bg-blue-500">Envoyer</button>
             </form>
         </section>
         <footer class="p-8 flex justify-center w-full">
