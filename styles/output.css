@@ -570,6 +570,10 @@ video {
   margin-bottom: 3.5rem;
 }
 
+.mr-0{
+  margin-right: 0px;
+}
+
 .mt-12{
   margin-top: 3rem;
 }
@@ -694,6 +698,18 @@ video {
   width: 83.333333%;
 }
 
+.w-4\/6{
+  width: 66.666667%;
+}
+
+.w-3\/6{
+  width: 50%;
+}
+
+.w-3\/5{
+  width: 60%;
+}
+
 .flex-row{
   flex-direction: row;
 }
@@ -720,6 +736,10 @@ video {
 
 .justify-around{
   justify-content: space-around;
+}
+
+.overflow-x-hidden{
+  overflow-x: hidden;
 }
 
 .overflow-y-scroll{
@@ -840,6 +860,11 @@ video {
   text-align: center;
 }
 
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-6xl{
   font-size: 3.75rem;
   line-height: 1;
@@ -853,11 +878,6 @@ video {
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .text-xl{
@@ -1049,6 +1069,22 @@ header, #button-hamburger{
   display: none;
 }
 
+.nav-link:hover > svg *, 
+.nav-link:hover{
+  color: #239EDB;
+  fill: #239EDB;
+}
+
+/*
+
+.roundedArea:hover > svg *,
+.roundedArea:hover {
+  background-color: yellowgreen;
+  fill: #FFFFFF;
+}
+
+*/
+
 /*
 colors: {
       'nav' : '#040B13',
@@ -1093,12 +1129,85 @@ colors: {
 }
 
 @media (min-width: 1024px){
+  .lg\:fixed{
+    position: fixed;
+  }
+
+  .lg\:ml-80{
+    margin-left: 20rem;
+  }
+
+  .lg\:flex{
+    display: flex;
+  }
+
+  .lg\:hidden{
+    display: none;
+  }
+
+  .lg\:h-screen{
+    height: 100vh;
+  }
+
+  .lg\:h-16{
+    height: 4rem;
+  }
+
+  .lg\:h-14{
+    height: 3.5rem;
+  }
+
+  .lg\:w-80{
+    width: 20rem;
+  }
+
+  .lg\:w-full{
+    width: 100%;
+  }
+
   .lg\:w-3\/5{
     width: 60%;
   }
 
   .lg\:w-4\/5{
     width: 80%;
+  }
+
+  .lg\:w-16{
+    width: 4rem;
+  }
+
+  .lg\:w-14{
+    width: 3.5rem;
+  }
+
+  .lg\:flex-col{
+    flex-direction: column;
+  }
+
+  .lg\:items-center{
+    align-items: center;
+  }
+
+  .lg\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .lg\:overflow-y-auto{
+    overflow-y: auto;
+  }
+
+  .lg\:overflow-x-hidden{
+    overflow-x: hidden;
+  }
+
+  .lg\:p-8{
+    padding: 2rem;
+  }
+
+  .lg\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .lg\:text-8xl{
@@ -1114,11 +1223,6 @@ colors: {
   .lg\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
-  }
-
-  .lg\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 
   .lg\:text-2xl{

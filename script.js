@@ -8,7 +8,7 @@ const main = document.querySelector('main');
 const navLink = document.getElementsByClassName('nav-link');
 
 function closeOrOpenNavbar(){
-    menu.className = toggle.checked ? 'fixed h-screen w-min p-8 header-width flex flex-col items-center justify-start overflow-y-scroll' : 'hidden';
+    menu.className = toggle.checked ? 'fixed h-screen w-min p-8 header-width flex flex-col items-center justify-start overflow-y-scroll overflow-x-hidden lg:fixed lg:h-screen lg:p-8 lg:w-80 lg:flex lg:flex-col lg:items-center lg:justify-start lg:overflow-y-auto lg:overflow-x-hidden' : 'hidden lg:fixed lg:h-screen lg:p-8 lg:w-80 lg:flex lg:flex-col lg:items-center lg:justify-start lg:overflow-y-auto lg:overflow-x-hidden';
     if(toggle.checked){
         buttonOfHamburger.src = '../images/icon/cross-white.png';
     }else{
@@ -18,13 +18,35 @@ function closeOrOpenNavbar(){
 
 toggle.addEventListener('click', closeOrOpenNavbar)
 
-for (var i = 0; i < navLink.length; i++) {
-    navLink[i].addEventListener('click', ()=>{
+
+/* DISPOSITION  */
+addEventListener('resize', ()=>{
+    let windowWidth = window.innerWidth;
+    if(windowWidth > 1024){
+        menu.className = 'fixed h-screen w-min p-8 header-width flex flex-col items-center justify-start overflow-y-scroll overflow-x-hidden lg:fixed lg:h-screen lg:p-8 lg:w-80 lg:flex lg:flex-col lg:items-center lg:justify-start lg:overflow-y-auto lg:overflow-x-hidden';
+    }else{
         menu.className = 'hidden';
         buttonOfHamburger.src = '../images/icon/menu-hamburger.png';
         toggle.checked = false;
-    });
+    }
+})
+for (let i = 0; i < navLink.length; i++){
+    navLink[i].addEventListener('click', ()=>{
+        let windowWidth = window.innerWidth;
+        if(windowWidth > 1024){
+            menu.className = 'fixed h-screen w-min p-8 header-width flex flex-col items-center justify-start overflow-y-scroll overflow-x-hidden lg:fixed lg:h-screen lg:p-8 lg:w-80 lg:flex lg:flex-col lg:items-center lg:justify-start lg:overflow-y-auto lg:overflow-x-hidden';
+        }else{
+            menu.className = 'hidden';
+            buttonOfHamburger.src = '../images/icon/menu-hamburger.png';
+            toggle.checked = false;
+        }
+    }, true);
 }
+
+
+
+
+
 /* POPUP */
 const overlay = document.getElementById('overlay');
 

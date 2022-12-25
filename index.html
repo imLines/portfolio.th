@@ -11,35 +11,32 @@
 
 <body class="relative">
     <input type="checkbox" id="nav-toggle" class="hidden">
-    <label for="nav-toggle"><img id="button-hamburger" src="./images/icon/menu-hamburger.png"
-            class="w-12 h-12 rounded-full  top-3 right-3 p-2 fixed" /></label>
+    <label for="nav-toggle"><img id="button-hamburger" src="./images/icon/menu-hamburger.png" class="w-12 h-12 rounded-full  top-3 right-3 p-2 fixed lg:hidden" /></label>
 
-    <header class="hidden ">
-        <div class="flex flex-col items-center w-full">
+    <header class="hidden overflow-x-hidden lg:fixed lg:h-screen lg:p-8 lg:w-80 lg:flex lg:flex-col lg:items-center lg:justify-start lg:overflow-y-auto lg:overflow-x-hidden">
+        <div class="flex flex-col items-center w-full justify-around">
             <img class="w-32 h-32 bg-white mt-5 mb-3 rounded-full overflow-y-scroll" src="./images/emoji-smile.png"
                 alt="my-emoji">
-            <h1 class="text-white">Tony Hubert</h1>
-            <div class="flex flex-row justify-center w-full">
-                <a href=""><img class="w-10 h-10" src="./images/icon/twitter-icon.svg" alt="link-icon-twitter" /></a>
-                <a href=""><img class="w-10 h-10" src="./images/icon/whatsapp-icon.svg" alt="link-icon-whatsapp" /></a>
-                <a href=""><img class="w-10 h-10" src="./images/icon/github-icon.svg" alt="link-icon-github" /></a>
-                <a href=""><img class="w-10 h-10" src="./images/icon/linkedin-icon.svg" alt="link-icon-linkedin" /></a>
+            <h1 class="text-white text-lg lg:text-xl">Tony Hubert</h1>
+            <div class="flex flex-row justify-center w-full"> 
+                <a href=""><img class="w-10 h-10 lg:w-14 lg:h-14" src="./images/icon/twitter-icon.svg" alt="link-icon-twitter" /></a>
+                <a href=""><img class="w-10 h-10 lg:w-14 lg:h-14" src="./images/icon/whatsapp-icon.svg" alt="link-icon-whatsapp" /></a>
+                <a href=""><img class="w-10 h-10 lg:w-14 lg:h-14" src="./images/icon/github-icon.svg" alt="link-icon-github" /></a>
+                <a href=""><img class="w-10 h-10 lg:w-14 lg:h-14" src="./images/icon/linkedin-icon.svg" alt="link-icon-linkedin" /></a>
             </div>
         </div>
-        <nav class="flex flex-col items-start justify-center h-full ml-8 mt-4 mb-14">
+        <nav class="flex flex-col items-start justify-center h-full ml-8 mt-4 mb-14 lg:w-full">
             <ul>
-                <li class="text-gray-400 ">
+                <li class="text-gray-400 text-lg lg:text-xl">
                     <a class="flex items-center mt-4 nav-link" href="#home">
-                        <div class=" text-center ">
                             <svg class="fill-gray-400 w-6 h-6" width="100" height="100" viewBox="0 0 50 50">
                                 <path
                                     d="M11 39h7.5V26.5h11V39H37V19.5L24 9.75 11 19.5Zm-3 3V18L24 6l16 12v24H26.5V29.5h-5V42Zm16-17.65Z" />
                             </svg>
-                        </div>
                         Acceuil
                     </a>
                 </li>
-                <li class="text-gray-400">
+                <li class="text-gray-400 text-lg lg:text-xl">
                     <a href="#whoIsMe" class="flex items-center mt-4 nav-link">
                         <svg class="fill-gray-400 w-6 h-6" width="100" height="100" viewBox="0 0 50 50">
                             <path
@@ -47,7 +44,7 @@
                         </svg>
                         Qui-suis je ?</a>
                 </li>
-                <li class="text-gray-400">
+                <li class="text-gray-400 text-lg lg:text-xl">
                     <a href="#myRoad" class="flex items-center mt-4 nav-link">
                         <svg class="fill-gray-400 w-6 h-6" width="100" height="100" viewBox="0 0 50 50">
                             <path
@@ -56,7 +53,7 @@
                         Mon parcours
                     </a>
                 </li>
-                <li class="text-gray-400">
+                <li class="text-gray-400 text-lg lg:text-xl">
                     <a href="#myFlow" class="flex items-center mt-4 nav-link">
                         <svg class="fill-gray-400 w-6 h-6" width="100" height="100" viewBox="0 0 50 50">
                             <path
@@ -65,7 +62,7 @@
                         Mes compétences
                     </a>
                 </li>
-                <li class="text-gray-400">
+                <li class="text-gray-400 text-lg lg:text-xl">
                     <a href="#myAchievements" class="flex items-center mt-4 nav-link">
                         <svg class="fill-gray-400 w-6 h-6" width="100" height="100" viewBox="0 0 50 50">
                             <path
@@ -74,7 +71,7 @@
                         Mes réalisations
                     </a>
                 </li>
-                <li class="text-gray-400">
+                <li class="text-gray-400 text-lg lg:text-xl">
                     <a href="#contactMe" class="flex items-center mt-4 nav-link">
                         <svg class="fill-gray-400 w-6 h-6" width="100" height="100" viewBox="0 0 50 50">
                             <path
@@ -87,27 +84,15 @@
         </nav>
     </header>
 
-    <main>
-        <section id="home"
-            class="bg-home-background bg-cover bg-center  w-screen h-screen flex items-center justify-center">
+    <main class="lg:ml-80  mr-0 overflow-x-hidden" >
+        <section id="home" class="bg-home-background bg-cover bg-center  w-screen h-screen flex items-center justify-center lg:w-full">
             <div class="flex flex-col items-start justify-center">
                 <h1 class="text-white text-6xl ml-8 lg:text-8xl">Tony Hubert</h1>
                 <h2 class="text-white text-2xl ml-8 lg:text-3xl">Développeur web Fullstack</h2>
             </div>
         </section>
 
-
-
-        <section>
-            <h2 class="title text-3xl lg:text-4xl">Title</h2>
-            <h3 class="bottom-title text-2xl lg:text-3xl">Sous title</h3>
-            <p class="etiquette text-lg lg:text-xl">Etiquette</p>
-            <p class="corp text-lg lg:text-xl">corp texte</p>
-        </section>
-
-
-
-        <section id="whoIsMe" class="h-auto w-screen py-7 px-6">
+        <section id="whoIsMe" class="h-auto w-full py-7 px-6 lg:w-full">
             <h2 class="text-3xl my-8 title lg:text-4xl">Qui suis-je ?</h2>
             <p class="corp text-lg lg:text-xl">
                 Bienvenue ! <br />
@@ -133,7 +118,7 @@
                     download>Télécharger mon CV</a>
             </div>
         </section>
-        <section id="myRoad" class="background-section h-auto w-screen py-7 px-6">
+        <section id="myRoad" class="background-section h-auto w-screen py-7 px-6 lg:w-full">
             <h2 class="title text-3xl my-8 lg:text-4xl">Mon parcours</h2>
 
             <h3 class="bottom-title text-2xl mt-12 lg:text-3xl">Découverte</h3>
@@ -172,7 +157,7 @@
                 Je ne cesse d’apprendre avec plaisir afin de servir dans le camp backend et frontend tout en effectuant
                 une veille journalière pour rester à jour.</p>
         </section>
-        <section id="myFlow" class=" h-auto w-screen py-12 px-6">
+        <section id="myFlow" class=" h-auto w-screen py-12 px-6 lg:w-full">
             <h2 class="title text-3xl my-8 lg:text-4xl">Mes compétences</h2>
 
             <h3 class="bottom-title text-2xl mt-12 lg:text-3xl">Frontend</h3>
@@ -197,17 +182,17 @@
             </p>
         </section>
 
-        <section id="myAchievements" class="background-section h-auto w-screen py-7 px-6 ">
+        <section id="myAchievements" class="background-section h-auto w-screen py-7 px-6 lg:w-full">
             <h2 class="text-3xl my-8 title lg:text-4xl">Mes réalisations</h2>
             <p class="corp text-lg pb-5 lg:text-xl">Voici les projets concrets que j’ai pu réaliser, certains sont
                 encore en développement.</p>
-            <div class="flex flex-col items-center w-full  md:flex-row md:flex-wrap md:justify-center">
+
+            <div class="flex flex-col items-center w-full m-auto md:flex-row md:flex-wrap md:justify-center">
 
                 <div id="overlay" class="overlay"></div>
                 <!--WWIDEV BACKEND-->
 
-                <div
-                    class="bg-wwiDEV-background mx-9 flex flex-col justify-between bg-cover bg-center mb-6 w-full h-52 md:w-96 md:h-72 ">
+                <div class="bg-wwiDEV-background mx-9 flex flex-col justify-between bg-cover bg-center mb-6 w-full h-52 md:w-96 md:h-72 ">
                     <div class="flex justify-center items-center banner  h-auto text-center p-2 ">
                         <p class="text-xl lg:text-2xl">wwiDEV API (backend)</p>
                     </div>
@@ -309,10 +294,10 @@
             </div>
         </section>
 
-        <section id="contactMe" class=" h-auto w-screen py-12 px-6">
+        <section id="contactMe" class=" h-auto w-screen py-12 px-6 lg:w-full">
             <h2 class="text-3xl my-8 title lg:text-4xl">Me contacter</h2>
             <h3 class="bottom-title text-2xl my-12 lg:text-3xl">sur les réseaux ou par mail</h3>
-            <div class="flex flex-row justify-around w-5/6 m-auto">
+            <div class="flex flex-row justify-around w-full lg:w-3/5 m-auto">
                 <a href=""><img class="w-16 h-auto button rounded-full p-2" src="./images/icon/twitter-icon.svg"
                         alt="link-icon-twitter" /></a>
                 <a href=""><img class="w-16 h-auto button rounded-full p-2" src="./images/icon/whatsapp-icon.svg"
@@ -362,7 +347,7 @@
                     class="button w-auto mb-5 mt-5 button rounded-lg p-3 text-center font-semibold shadow-xl text-lg lg:text-xl">Envoyer</button>
             </form>
         </section>
-        <footer class="p-8 flex justify-center">
+        <footer class="p-8 flex justify-center w-full">
             <p class="text-sm text-center lg:text-lg"> Portfolio de M. Hubert Tony - 2022/2023 </p>
         </footer>
     </main>

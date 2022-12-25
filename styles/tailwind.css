@@ -152,7 +152,21 @@ header, #button-hamburger{
     display: none;
 }
 
+.nav-link:hover > svg *, 
+.nav-link:hover{
+    color: #239EDB;
+    fill: #239EDB;
+}
 
+/*
+
+.roundedArea:hover > svg *,
+.roundedArea:hover {
+  background-color: yellowgreen;
+  fill: #FFFFFF;
+}
+
+*/
 
 /*
 colors: {
