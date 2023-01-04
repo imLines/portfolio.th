@@ -64,6 +64,14 @@ links.forEach(link => {
 /* POPUP */
 const overlay = document.getElementById('overlay');
 
+overlay.addEventListener('click', ()=>{
+    popupWwidevBackend.className = 'dialog-close'
+    popupWwidevFrontend.className = 'dialog-close'
+    popupPyjamzz.className = 'dialog-close'
+    html.style.overflow = 'scroll';
+    overlay.style.display = 'none';
+})
+
 /* POPUP WWIDEV BACKEND*/
 const buttonPopupWwidevBackend = document.getElementById('button-popup-wwiDEV-backend');
 const popupWwidevBackend = document.getElementById('popup-wwiDEV-backend');

@@ -135,7 +135,8 @@ header, #button-hamburger{
 }
 .close-text{
     text-decoration: underline;
-    margin-left: 90%;
+    position: absolute;
+    margin-left: 75%;
 }
 .dialog-close{
     display: none;
