@@ -929,16 +929,30 @@ video {
   font-family: 'Poppins', sans-serif;
 }
 
+/* BUTTON SCROLL TOP*/
+
+#button-to-scroll-top {
+  position: fixed;
+  background-image: url('../images/icon/planeScollTop.png');
+  background-size: cover;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  top: 90%;
+  left: 95%;
+  margin-top: -50px;
+  margin-left: -50px;
+  z-index: 49;
+}
+
+/* DISPOSITION AND STYLE */
+
 .header-width{
   width: auto;
 }
 
 #button-hamburger{
-  z-index: 50;
-}
-
-#button-to-scroll-top{
-  z-index: 50;
+  z-index: 51;
 }
 
 .title{
@@ -1029,6 +1043,8 @@ header, #button-hamburger{
   width: 50%;
 }
 
+/* POPUP */
+
 .overlay{
   display: none;
   position: fixed;
@@ -1094,47 +1110,8 @@ header, #button-hamburger{
 }
 
 .animate-fadeIn {
-  animation: fadeIn 1s ease-in forwards;
+  animation: fadeIn 1.3s ease-in-out backwards;
 }
-
-/* 360deg Animation */
-
-#button-to-scroll-top {
-  position: fixed;
-  background-image: url('../images/icon/fusee.png');
-  background-size: cover;
-  background-position: center;
-  height: 40px;
-  width: 40px;
-  top: 90%;
-  left: 95%;
-  margin-top: -50px;
-  margin-left: -50px;
-  animation: rotate 1s linear infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-}
-
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/*
-colors: {
-      'nav' : '#040B13',
-      'first' : '#239EDB',
-      'corp' : '#38393A',
-      'title': '#19426B',
-      'bottom-title': '#050D18'
-      'date-elm-grey': '#E5EDF9',
-      'background-section': '#F5F8FD',
-    },
-
-*/
 
 .hover\:bg-blue-500:hover{
   --tw-bg-opacity: 1;
@@ -1270,3 +1247,4 @@ colors: {
     line-height: 1.75rem;
   }
 }
+

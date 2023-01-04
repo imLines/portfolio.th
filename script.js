@@ -19,7 +19,7 @@ function closeOrOpenNavbar(){
 toggle.addEventListener('click', closeOrOpenNavbar)
 
 
-/* DISPOSITION  */
+/* AUTO_CLOSE WHEN WIDTH ACCEPT*/
 addEventListener('resize', ()=>{
     let windowWidth = window.innerWidth;
     if(windowWidth > 1024){
@@ -30,9 +30,12 @@ addEventListener('resize', ()=>{
         toggle.checked = false;
     }
 })
+
+
+/* AUTOCLOSE */
 for (let i = 0; i < navLink.length; i++){
-    navLink[i].addEventListener('click', ()=>{
-        let windowWidth = window.innerWidth;
+    navLink[i].addEventListener('click', event=>{
+        let windowWidth = window.innerWidth;       
         if(windowWidth > 1024){
             menu.className = 'fixed h-screen w-min p-8 header-width flex flex-col items-center justify-start overflow-y-scroll overflow-x-hidden lg:fixed lg:h-screen lg:p-8 lg:w-80 lg:flex lg:flex-col lg:items-center lg:justify-start lg:overflow-y-auto lg:overflow-x-hidden';
         }else{
@@ -43,6 +46,17 @@ for (let i = 0; i < navLink.length; i++){
     }, true);
 }
 
+/* SCROLL SMOOTH NAVLINK */
+const links = document.querySelectorAll('nav a');
+
+links.forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();  // Empêche le rechargement de la page
+    const targetId = event.target.getAttribute('href');
+    const target = document.querySelector(targetId);
+    target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
 
 
 
@@ -161,7 +175,6 @@ form.addEventListener('submit', (e)=>{
 const callback = function (entries) {
     entries.forEach((entry) => {  
       if (entry.isIntersecting) {
-        console.log(entry)
         entry.target.classList.add("animate-fadeIn");
       } else {
         //If unset comment in bottom, remove the animation for re add after
@@ -180,15 +193,6 @@ const callback = function (entries) {
 
   /* Spin for button to up top */
 const buttonToGoTop = document.getElementById('button-to-scroll-top');
-
-window.addEventListener("scroll", () => {
-      document.body.style.setProperty(
-        "--scroll",
-        window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-      );
-    },
-    false
-  );
   
 const scrollToTop = () => {
     buttonToGoTop.addEventListener("click", () => {
