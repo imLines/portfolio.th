@@ -582,24 +582,24 @@ video {
   margin-right: 0px;
 }
 
-.mt-12{
-  margin-top: 3rem;
-}
-
 .mt-7{
   margin-top: 1.75rem;
+}
+
+.mt-12{
+  margin-top: 3rem;
 }
 
 .mb-6{
   margin-bottom: 1.5rem;
 }
 
-.mb-5{
-  margin-bottom: 1.25rem;
-}
-
 .mt-8{
   margin-top: 2rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
 }
 
 .flex{
@@ -786,7 +786,7 @@ video {
 }
 
 .bg-home-background{
-  background-image: url('../images/background-hills.png');
+  background-image: url('../images/background-home.webp');
 }
 
 .bg-wwiDEV-background{
@@ -901,6 +901,10 @@ video {
   text-decoration-line: line-through;
 }
 
+.underline-offset-2{
+  text-underline-offset: 2px;
+}
+
 .shadow-xl{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -911,10 +915,6 @@ video {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.delay-75{
-  transition-delay: 75ms;
 }
 
 .duration-150{
@@ -970,6 +970,11 @@ video {
   font-weight: 900;
 }
 
+.title-home{
+  color: #E5EDF9;
+  font-weight: 800;
+}
+
 .background-section{
   background-color: #F5F8FD;
 }
@@ -988,13 +993,22 @@ video {
 .button{
   background-color: #239EDB;
   color: #fff;
-  box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.55);
+  box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.20);
   border-radius: 10px;
 }
 
 .button:hover{
   box-shadow: none;
   cursor: pointer;
+}
+
+.link{
+  color: #239EDB;
+}
+
+.link:hover{
+  -webkit-text-decoration: underline #239EDB;
+          text-decoration: underline #239EDB;
 }
 
 .form-section input{
@@ -1241,6 +1255,11 @@ header, #button-hamburger{
   .lg\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .lg\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .lg\:text-lg{

@@ -41,6 +41,10 @@
     color: #050D18;
     font-weight: 900;
 }
+.title-home{
+    color: #E5EDF9;
+    font-weight: 800;
+}
 .background-section{
     background-color: #F5F8FD;
 }
@@ -55,12 +59,19 @@
 .button{
     background-color: #239EDB;
     color: #fff;
-    box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.55);
+    box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
 }
 .button:hover{
     box-shadow: none;
     cursor: pointer;
+}
+.link{
+    color: #239EDB;
+}
+.link:hover{
+    text-decoration: underline #239EDB;
+
 }
 .form-section input{
     background-color: #E5EDF9;
