@@ -68,6 +68,7 @@ overlay.addEventListener('click', ()=>{
     popupWwidevBackend.className = 'dialog-close'
     popupWwidevFrontend.className = 'dialog-close'
     popupPyjamzz.className = 'dialog-close'
+    popupGekalories.className = 'dialog-close'
     html.style.overflow = 'scroll';
     overlay.style.display = 'none';
 })
@@ -120,6 +121,23 @@ buttonPopupPyjamzz.addEventListener('click', ()=>{
 })
 buttonClosePopupFontend.addEventListener('click', ()=>{
     popupPyjamzz.className = 'dialog-close'
+    html.style.overflow = 'scroll';
+    overlay.style.display = 'none';
+    
+})
+
+/* POPUP GEKALORIES */
+const buttonPopupGekalories = document.getElementById('button-popup-gekalories');
+const popupGekalories = document.getElementById('popup-gekalories');
+const buttonClosePopupGekalories = document.getElementById('button-close-popup-gekalories');
+
+buttonPopupGekalories.addEventListener('click', ()=>{
+    popupGekalories.className = 'dialog-open'
+    html.style.overflow = 'hidden';
+    overlay.style.display = 'block';
+})
+buttonClosePopupGekalories.addEventListener('click', ()=>{
+    popupGekalories.className = 'dialog-close'
     html.style.overflow = 'scroll';
     overlay.style.display = 'none';
     
